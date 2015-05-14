@@ -25,11 +25,12 @@
 }
 
 -(void)open:(NSMutableArray *)array{
-    if ([array isKindOfClass:[NSMutableArray class]] && [array count]>0) {
-        CGFloat x = [[array objectAtIndex:0] floatValue];
-        CGFloat y = [[array objectAtIndex:1] floatValue];
-        CGFloat w = [[array objectAtIndex:2] floatValue];
-        CGFloat h = [[array objectAtIndex:3] floatValue];
+  //  if ([array isKindOfClass:[NSMutableArray class]] && [array count]>0) {
+     //   CGFloat x = [[array objectAtIndex:0] floatValue];
+       // CGFloat y = [[array objectAtIndex:1] floatValue];
+      //  CGFloat w = [[array objectAtIndex:2] floatValue];
+      //  CGFloat h = [[array objectAtIndex:3] floatValue];
+    CGFloat h=0;
  
         if (!self.pseudoTextField) {
             self.pseudoTextField = [[UITextField alloc] initWithFrame:CGRectZero];
@@ -46,12 +47,13 @@
         }
         if (!self.areaPicker) {
             self.areaPicker = [[LDAreaPickerView alloc] initWithFrame:CGRectMake(0, [EUtility screenHeight] - h, [EUtility screenWidth], h) Style:LDAreaPickerWithStateAndCityAndDistrict delegate:self];
-            self.pseudoTextField.inputView = self.areaPicker;
+            
 
         }
+        self.pseudoTextField.inputView = self.areaPicker;
         [self.pseudoTextField becomeFirstResponder];
         
-    }
+   // }
 }
 - (void)pickerDidChaneStatus:(LDAreaPickerView *)picker{
     NSString *resultStr = nil;
@@ -71,11 +73,13 @@
 -(void)clickBtnDone{
     NSString *resultStr = nil;
     if (self.areaPicker.pickerStyle == LDAreaPickerWithStateAndCityAndDistrict) {
-        resultStr = [NSString stringWithFormat:@"%@ %@ %@", self.areaPicker.locate.state, self.areaPicker.locate.city, self.areaPicker.locate.district];
+        resultStr = [NSString stringWithFormat:@"%@%@%@", self.areaPicker.locate.state, self.areaPicker.locate.city, self.areaPicker.locate.district];
     } else{
-        resultStr = [NSString stringWithFormat:@"%@ %@", self.areaPicker.locate.state, self.areaPicker.locate.city];
+        resultStr = [NSString stringWithFormat:@"%@%@", self.areaPicker.locate.state, self.areaPicker.locate.city];
     }
-    [self.meBrwView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"uexAreaPickerView.onConfirmClick(%@);",[@{@"city":resultStr} JSONRepresentation]]];
+    NSString *str =[NSString stringWithFormat:@"uexAreaPickerView.onConfirmClick('%@');",[@{@"city":resultStr} JSONRepresentation]];
+    
+    [self.meBrwView stringByEvaluatingJavaScriptFromString:str];
 
 }
 @end
