@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
-    <plugin uexName="uexAreaPickerView" version="3.0.1" build="1">
-        <info>1:修复open不能正常运作的bug</info>
+    <plugin uexName="uexAreaPickerView" version="3.0.2" build="2">
+        <info>2:修复了选择器会被错误关闭的bug</info>
+        <build>1:修复open不能正常运作的bug</build>
         <build>0:城市选择</build>
     </plugin>
 </uexplugins>
