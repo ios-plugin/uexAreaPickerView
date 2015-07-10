@@ -182,9 +182,9 @@ const CGFloat kComfirmButtonWidth=60.f;
 -(void)clickBtnDone{
     NSString *resultStr = nil;
     if (self.areaPicker.pickerStyle == LDAreaPickerWithStateAndCityAndDistrict) {
-        resultStr = [NSString stringWithFormat:@"%@%@%@", self.areaPicker.locate.state, self.areaPicker.locate.city, self.areaPicker.locate.district];
+        resultStr = [NSString stringWithFormat:@"%@ %@ %@", self.areaPicker.locate.state, self.areaPicker.locate.city, self.areaPicker.locate.district];
     } else{
-        resultStr = [NSString stringWithFormat:@"%@%@", self.areaPicker.locate.state, self.areaPicker.locate.city];
+        resultStr = [NSString stringWithFormat:@"%@ %@", self.areaPicker.locate.state, self.areaPicker.locate.city];
     }
     NSString *str =[NSString stringWithFormat:@"uexAreaPickerView.onConfirmClick('%@');",[@{@"city":resultStr} JSONRepresentation]];
     
