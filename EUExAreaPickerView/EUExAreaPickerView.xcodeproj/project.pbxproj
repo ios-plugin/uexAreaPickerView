@@ -7,25 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8457ED371A6AC79900F7C257 /* EUExAreaPickerView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8457ED361A6AC79900F7C257 /* EUExAreaPickerView.h */; };
+		42A5BE771C2BC118000D8B4E /* uexAreaPickerView.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42A5BE761C2BC118000D8B4E /* uexAreaPickerView.plist */; };
 		8457ED391A6AC79900F7C257 /* EUExAreaPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457ED381A6AC79900F7C257 /* EUExAreaPickerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8457ED621A6AC81E00F7C257 /* LDAreaPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457ED5D1A6AC81E00F7C257 /* LDAreaPickerView.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		8457ED311A6AC79900F7C257 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				8457ED371A6AC79900F7C257 /* EUExAreaPickerView.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		42A5BE701C2BC05D000D8B4E /* uexAreaPickerView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uexAreaPickerView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A5BE761C2BC118000D8B4E /* uexAreaPickerView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = uexAreaPickerView.plist; sourceTree = "<group>"; };
 		8457ED331A6AC79900F7C257 /* libuexAreaPickerView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexAreaPickerView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8457ED361A6AC79900F7C257 /* EUExAreaPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUExAreaPickerView.h; sourceTree = "<group>"; };
 		8457ED381A6AC79900F7C257 /* EUExAreaPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUExAreaPickerView.m; sourceTree = "<group>"; };
@@ -46,6 +35,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		42A5BE6D1C2BC05D000D8B4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8457ED301A6AC79900F7C257 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -56,10 +52,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42A5BE711C2BC05D000D8B4E /* uexAreaPickerViewBundle */ = {
+			isa = PBXGroup;
+			children = (
+				42A5BE761C2BC118000D8B4E /* uexAreaPickerView.plist */,
+			);
+			path = uexAreaPickerViewBundle;
+			sourceTree = "<group>";
+		};
 		8457ED2A1A6AC79900F7C257 = {
 			isa = PBXGroup;
 			children = (
 				8457ED351A6AC79900F7C257 /* EUExAreaPickerView */,
+				42A5BE711C2BC05D000D8B4E /* uexAreaPickerViewBundle */,
 				8457ED341A6AC79900F7C257 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				8457ED331A6AC79900F7C257 /* libuexAreaPickerView.a */,
+				42A5BE701C2BC05D000D8B4E /* uexAreaPickerView.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,13 +128,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		42A5BE6F1C2BC05D000D8B4E /* uexAreaPickerViewBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42A5BE731C2BC05D000D8B4E /* Build configuration list for PBXNativeTarget "uexAreaPickerViewBundle" */;
+			buildPhases = (
+				42A5BE6C1C2BC05D000D8B4E /* Sources */,
+				42A5BE6D1C2BC05D000D8B4E /* Frameworks */,
+				42A5BE6E1C2BC05D000D8B4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = uexAreaPickerViewBundle;
+			productName = uexAreaPickerViewBundle;
+			productReference = 42A5BE701C2BC05D000D8B4E /* uexAreaPickerView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		8457ED321A6AC79900F7C257 /* EUExAreaPickerView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8457ED471A6AC79900F7C257 /* Build configuration list for PBXNativeTarget "EUExAreaPickerView" */;
 			buildPhases = (
 				8457ED2F1A6AC79900F7C257 /* Sources */,
 				8457ED301A6AC79900F7C257 /* Frameworks */,
-				8457ED311A6AC79900F7C257 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -148,6 +170,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = LinDong;
 				TargetAttributes = {
+					42A5BE6F1C2BC05D000D8B4E = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					8457ED321A6AC79900F7C257 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -166,11 +191,30 @@
 			projectRoot = "";
 			targets = (
 				8457ED321A6AC79900F7C257 /* EUExAreaPickerView */,
+				42A5BE6F1C2BC05D000D8B4E /* uexAreaPickerViewBundle */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		42A5BE6E1C2BC05D000D8B4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42A5BE771C2BC118000D8B4E /* uexAreaPickerView.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		42A5BE6C1C2BC05D000D8B4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8457ED2F1A6AC79900F7C257 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,6 +227,49 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		42A5BE741C2BC05D000D8B4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = NO;
+				CONFIGURATION_BUILD_DIR = $SRCROOT/uexAreaPickerView;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zywx.uexAreaPickerViewBundle;
+				PRODUCT_NAME = uexAreaPickerView;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		42A5BE751C2BC05D000D8B4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = NO;
+				CONFIGURATION_BUILD_DIR = $SRCROOT/uexAreaPickerView;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zywx.uexAreaPickerViewBundle;
+				PRODUCT_NAME = uexAreaPickerView;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		8457ED451A6AC79900F7C257 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -283,6 +370,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		42A5BE731C2BC05D000D8B4E /* Build configuration list for PBXNativeTarget "uexAreaPickerViewBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42A5BE741C2BC05D000D8B4E /* Debug */,
+				42A5BE751C2BC05D000D8B4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8457ED2E1A6AC79900F7C257 /* Build configuration list for PBXProject "EUExAreaPickerView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

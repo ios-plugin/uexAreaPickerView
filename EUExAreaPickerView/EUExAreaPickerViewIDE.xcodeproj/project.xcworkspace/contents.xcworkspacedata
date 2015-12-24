@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:uexAreaPickerView.xcodeproj">
+      location = "self:EUExAreaPickerView.xcodeproj">
    </FileRef>
 </Workspace>

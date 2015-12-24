@@ -7,6 +7,9 @@
 //
 
 #import "LDAreaPickerView.h"
+#import "EUtility.h"
+
+#define UEX_BUNDLE [EUtility bundleForPlugin:@"uexAreaPickerView"]
 @implementation LDLocation
 @end
 @interface LDAreaPickerView () <UIPickerViewDataSource,UIPickerViewDelegate>{
@@ -34,9 +37,10 @@
         [self setBackgroundColor:[UIColor whiteColor]];
         self.showsSelectionIndicator = YES;
         self.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+    
         //加载数据
         if (self.pickerStyle == LDAreaPickerWithStateAndCityAndDistrict) {
-            provinces = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"uexAreaPickerView/uexAreaPickerView.plist" ofType:nil]];
+            provinces = [[NSArray alloc] initWithContentsOfFile:[UEX_BUNDLE pathForResource:@"uexAreaPickerView/uexAreaPickerView.plist" ofType:nil]];
             cities = [[provinces objectAtIndex:0] objectForKey:@"cities"];
             
             self.locate.state = [[provinces objectAtIndex:0] objectForKey:@"state"];
@@ -50,7 +54,7 @@
             }
             
         } else{
-            provinces = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"uexAreaPickerView/uexAreaPickerView.plist" ofType:nil]];
+            provinces = [[NSArray alloc] initWithContentsOfFile:[UEX_BUNDLE pathForResource:@"uexAreaPickerView/uexAreaPickerView.plist" ofType:nil]];
             cities = [[provinces objectAtIndex:0] objectForKey:@"cities"];
             self.locate.state = [[provinces objectAtIndex:0] objectForKey:@"state"];
             self.locate.city = [cities objectAtIndex:0];

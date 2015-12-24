@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
     <plugin uexName="uexAreaPickerView" version="3.0.3" build="3">
-    	<info>3:onConfirmClick回调值中间添加空格(" ")，方便用户拆分</info>
+    	<info>4:添加IDE支持</info>
+    	<build>3:onConfirmClick回调值中间添加空格(" ")，方便用户拆分</info>
         <build>2:修复了选择器会被错误关闭的bug</build>
         <build>1:修复open不能正常运作的bug</build>
         <build>0:城市选择</build>
