@@ -40,7 +40,7 @@
     
         //加载数据
         if (self.pickerStyle == LDAreaPickerWithStateAndCityAndDistrict) {
-            provinces = [[NSArray alloc] initWithContentsOfFile:[UEX_BUNDLE pathForResource:@"uexAreaPickerView/uexAreaPickerView.plist" ofType:nil]];
+            provinces = [[NSArray alloc] initWithContentsOfFile:[UEX_BUNDLE pathForResource:@"uexAreaPickerView" ofType:@"plist"]];
             cities = [[provinces objectAtIndex:0] objectForKey:@"cities"];
             
             self.locate.state = [[provinces objectAtIndex:0] objectForKey:@"state"];
@@ -54,7 +54,7 @@
             }
             
         } else{
-            provinces = [[NSArray alloc] initWithContentsOfFile:[UEX_BUNDLE pathForResource:@"uexAreaPickerView/uexAreaPickerView.plist" ofType:nil]];
+            provinces = [[NSArray alloc] initWithContentsOfFile:[UEX_BUNDLE pathForResource:@"uexAreaPickerView" ofType:@"plist"]];
             cities = [[provinces objectAtIndex:0] objectForKey:@"cities"];
             self.locate.state = [[provinces objectAtIndex:0] objectForKey:@"state"];
             self.locate.city = [cities objectAtIndex:0];
