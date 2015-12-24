@@ -38,25 +38,25 @@ const CGFloat kComfirmButtonWidth=60.f;
 }
 
 -(void)clean{
-    if(self.areaPicker){
-        [self.areaPicker removeFromSuperview];
-        [self.areaPicker release];
-        self.areaPicker=nil;
+    if(_areaPicker){
+        [_areaPicker removeFromSuperview];
+        [_areaPicker release];
+        _areaPicker=nil;
     }
-    if(self.clearField){
-        [self.clearField removeFromSuperview];
-        [self.clearField release];
-        self.clearField=nil;
+    if(_clearField){
+        [_clearField removeFromSuperview];
+        [_clearField release];
+        _clearField=nil;
     }
-    if(self.confirmField){
-        [self.confirmField removeFromSuperview];
-        [self.confirmField release];
-        self.confirmField=nil;
+    if(_confirmField){
+        [_confirmField removeFromSuperview];
+        [_confirmField release];
+        _confirmField=nil;
     }
-    if(self.confirmButton){
-        [self.confirmButton removeFromSuperview];
-        [self.confirmButton release];
-        self.confirmButton=nil;
+    if(_confirmButton){
+        [_confirmButton removeFromSuperview];
+        [_confirmButton release];
+        _confirmButton=nil;
     }
 }
 
