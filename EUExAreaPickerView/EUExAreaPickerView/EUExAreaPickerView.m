@@ -30,12 +30,12 @@ const CGFloat kComfirmButtonWidth=60.f;
 
 
 
--(id)initWithBrwView:(EBrowserView *)eInBrwView{
-    self = [super initWithBrwView:eInBrwView];
-    if (self) {
-    }
-    return self;
-}
+//-(id)initWithBrwView:(EBrowserView *)eInBrwView{
+//    self = [super initWithBrwView:eInBrwView];
+//    if (self) {
+//    }
+//    return self;
+//}
 
 -(void)clean{
     if(_areaPicker){
@@ -138,10 +138,17 @@ const CGFloat kComfirmButtonWidth=60.f;
     }
 }
 -(void)showAll{
-    [EUtility brwView:meBrwView addSubview:self.clearField];
-    [EUtility brwView:meBrwView addSubview:self.confirmField];
-    [EUtility brwView:meBrwView addSubview:self.confirmButton];
-    [EUtility brwView:meBrwView addSubview:self.areaPicker];
+    //[EUtility brwView:meBrwView addSubview:self.clearField];
+    [[self.webViewEngine webView] addSubview:self.clearField];
+    
+    //[EUtility brwView:meBrwView addSubview:self.confirmField];
+     [[self.webViewEngine webView] addSubview:self.confirmField];
+    
+   // [EUtility brwView:meBrwView addSubview:self.confirmButton];
+     [[self.webViewEngine webView] addSubview:self.confirmButton];
+    
+    //[EUtility brwView:meBrwView addSubview:self.areaPicker];
+     [[self.webViewEngine webView] addSubview:self.areaPicker];
 }
 - (void)pickerDidChaneStatus:(LDAreaPickerView *)picker{
     NSString *resultStr = nil;
@@ -186,9 +193,10 @@ const CGFloat kComfirmButtonWidth=60.f;
     } else{
         resultStr = [NSString stringWithFormat:@"%@ %@", self.areaPicker.locate.state, self.areaPicker.locate.city];
     }
-    NSString *str =[NSString stringWithFormat:@"uexAreaPickerView.onConfirmClick('%@');",[@{@"city":resultStr} JSONRepresentation]];
+    //NSString *str =[NSString stringWithFormat:@"uexAreaPickerView.onConfirmClick('%@');",[@{@"city":resultStr} JSONRepresentation]];
     
-    [self.meBrwView stringByEvaluatingJavaScriptFromString:str];
+    //[self.meBrwView stringByEvaluatingJavaScriptFromString:str];
+    [self.webViewEngine callbackWithFunctionKeyPath:@"uexAreaPickerView.onConfirmClick" arguments:ACArgsPack([@{@"city":resultStr} ac_JSONFragment])];
     [self closeAll];
 
 }

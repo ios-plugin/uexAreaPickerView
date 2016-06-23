@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21563EA21D1BD2060027816B /* AppCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21563EA11D1BD2060027816B /* AppCanKit.framework */; };
 		42A5BE771C2BC118000D8B4E /* uexAreaPickerView.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42A5BE761C2BC118000D8B4E /* uexAreaPickerView.plist */; };
 		8457ED391A6AC79900F7C257 /* EUExAreaPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457ED381A6AC79900F7C257 /* EUExAreaPickerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8457ED621A6AC81E00F7C257 /* LDAreaPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457ED5D1A6AC81E00F7C257 /* LDAreaPickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21563EA11D1BD2060027816B /* AppCanKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCanKit.framework; sourceTree = "<group>"; };
 		42A5BE701C2BC05D000D8B4E /* uexAreaPickerView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uexAreaPickerView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A5BE761C2BC118000D8B4E /* uexAreaPickerView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = uexAreaPickerView.plist; sourceTree = "<group>"; };
 		8457ED331A6AC79900F7C257 /* libuexAreaPickerView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexAreaPickerView.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,7 +31,6 @@
 		8457ED5B1A6AC81E00F7C257 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		8457ED5C1A6AC81E00F7C257 /* LDAreaPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDAreaPickerView.h; sourceTree = "<group>"; };
 		8457ED5D1A6AC81E00F7C257 /* LDAreaPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDAreaPickerView.m; sourceTree = "<group>"; };
-		8457ED661A6AC8E500F7C257 /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
 		8457ED671A6AC8E500F7C257 /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
 		8457ED681A6AC8E500F7C257 /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21563EA21D1BD2060027816B /* AppCanKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +94,7 @@
 		8457ED511A6AC81E00F7C257 /* sourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				21563EA11D1BD2060027816B /* AppCanKit.framework */,
 				8457ED521A6AC81E00F7C257 /* JSON */,
 				8457ED5C1A6AC81E00F7C257 /* LDAreaPickerView.h */,
 				8457ED5D1A6AC81E00F7C257 /* LDAreaPickerView.m */,
@@ -118,7 +121,6 @@
 		8457ED651A6AC8E500F7C257 /* engineHeader */ = {
 			isa = PBXGroup;
 			children = (
-				8457ED661A6AC8E500F7C257 /* EUExBase.h */,
 				8457ED671A6AC8E500F7C257 /* EUExBaseDefine.h */,
 				8457ED681A6AC8E500F7C257 /* EUtility.h */,
 			);
@@ -349,6 +351,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexAreaPickerView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExAreaPickerView/sourceCode",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = uexAreaPickerView;
@@ -360,6 +366,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexAreaPickerView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExAreaPickerView/sourceCode",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = uexAreaPickerView;
